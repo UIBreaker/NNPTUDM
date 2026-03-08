@@ -1,0 +1,25 @@
+{
+  "name": "nnptudm",
+  "version": "1.0.0",
+  "description": "Nguyễn Vũ Nhật Nam MSSV:2280602027",
+  "main": "baitap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UIBreaker/NNPTUDM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UIBreaker/NNPTUDM/issues"
+  },
+  "homepage": "https://github.com/UIBreaker/NNPTUDM#readme",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.4"
+  }
+}
