@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.controls,
+.sort-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Style cho bảng */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+/* YÊU CẦU: 1 dòng đen, 1 dòng trắng */
+tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Trắng */
+  color: #000;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #000000; /* Đen */
+  color: #ffffff; /* Chữ trắng trên nền đen */
+}
+
+/* Hiển thị hình ảnh nhỏ gọn */
+.product-images {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.product-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 1px solid #999;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
