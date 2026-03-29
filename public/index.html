@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post and Comment Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Post Dashboard</h1>
+        
+        <div class="create-post-container">
+            <h3>Tạo Post Mới</h3>
+            <input type="text" id="postTitle" placeholder="Tiêu đề bài viết">
+            <textarea id="postContent" placeholder="Nội dung bài viết"></textarea>
+            <button onclick="createPost()">Tạo Post</button>
+        </div>
+
+        <div id="postsList"></div>
+    </div>
+
+    <!-- Modal cho Sửa Comment -->
+    <div id="editCommentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h2>Sửa Comment</h2>
+            <textarea id="editCommentContent" rows="4"></textarea>
+            <button id="saveEditCommentBtn">Lưu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
