@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Dashboard | UIBreaker</title>
+    <link rel="stylesheet" href="product-dashboard.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <h1>Hệ thống Quản lý Sản phẩm</h1>
+            <p>Dữ liệu tích hợp từ Escuelajs API</p>
+        </header>
+
+        <section class="toolbar">
+            <div class="search-box">
+                <input type="text" id="searchTitle" placeholder="Tìm kiếm theo tên sản phẩm...">
+            </div>
+
+            <div class="pagination-size">
+                <label for="pageSize">Độ phân trang:</label>
+                <select id="pageSize">
+                    <option value="5">5 mục / trang</option>
+                    <option value="10">10 mục / trang</option>
+                    <option value="20">20 mục / trang</option>
+                </select>
+            </div>
+
+            <div class="sort-actions">
+                <button onclick="sortData('price', 'asc')">Giá Tăng ↑</button>
+                <button onclick="sortData('price', 'desc')">Giá Giảm ↓</button>
+                <button onclick="sortData('title', 'asc')">Tên (A-Z)</button>
+                <button onclick="sortData('title', 'desc')">Tên (Z-A)</button>
+            </div>
+        </section>
+
+        <section class="table-container">
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên sản phẩm (Title)</th>
+                        <th>Giá (Price)</th>
+                        <th>Hình ảnh</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Dữ liệu JS sẽ được inject vào đây -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="pagination">
+            <button id="btnPrev" onclick="navigatePage(-1)">« Trang trước</button>
+            <span id="pageIndicator" class="page-indicator">Trang 1</span>
+            <button id="btnNext" onclick="navigatePage(1)">Trang sau »</button>
+        </section>
+
+        <!-- Link back to index for convenience -->
+         <div style="text-align: center; margin-top: 20px;">
+             <a href="index.html" style="color: #4facfe; text-decoration: none;">← Quay lại bảng Post & Comments</a>
+         </div>
+    </div>
+
+    <script src="product-dashboard.js"></script>
+</body>
+</html>
