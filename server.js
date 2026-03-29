@@ -4,6 +4,8 @@ const path = require('path');
 const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRoutes');
 const commentRoutes = require('./routes/commentRoutes');
+const roleRoutes = require('./routes/roleRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 const app = express();
 app.use(express.json()); // Để server đọc được dữ liệu JSON từ request
@@ -20,6 +22,8 @@ mongoose.connect('mongodb://localhost:27017/HutechDB')
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/comments', commentRoutes);
+app.use('/api/roles', roleRoutes);
+app.use('/api/products', productRoutes);
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server chạy tại: http://localhost:${PORT}`));
